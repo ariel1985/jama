@@ -1,5 +1,1 @@
-# jama
-
-Assignment for: https://github.com/techjoomla/developer-assignments/blob/master/Ionic-Assignment-1.md#form-to-create-a-new-person 
-
-
+### :point_right: This starter repo has moved to the [ionic-team/starters](https://github.com/ionic-team/starters/tree/master/ionic-angular/official/blank) repo! :point_left:
