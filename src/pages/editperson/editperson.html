@@ -1,0 +1,38 @@
+<!--
+  Generated template for the EditpersonPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>Edit: {{ person.name }}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <form>
+        <ion-item>
+            <ion-label>Name</ion-label>
+            <ion-input type="text" [(ngModel)]="person.name" name="name"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>Email</ion-label>
+            <ion-input type="email" [(ngModel)]="person.email" name="email"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>Country</ion-label>
+            <ion-input type="text" [(ngModel)]="person.country" name="country"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>Date Of Birth</ion-label>
+            <ion-datetime [(ngModel)]="person.dob" display-format="YYYY/MM/DD" picker-format="YYYY/MM/DD" name="dob"></ion-datetime>
+        </ion-item>
+ 		<ion-item>
+            <ion-label>Avatar</ion-label>
+            <ion-input type="text" [(ngModel)]="person.avatar" name="avatar"></ion-input>
+        </ion-item>
+
+        <button (click)="savePerson()" ion-button type="submit" block>Save Details</button>
+    </form>
+</ion-content>

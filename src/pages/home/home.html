@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      <button ion-button (click)="addPerson()">ADD Person</button>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card *ngFor="let person of people | async ">
+    <ion-item>
+      <ion-avatar item-start>
+        <img src="{{ person.avatar }}">
+      </ion-avatar>
+      <h1 (click)="editPerson(person.id)" style="color:#488aff; cursor: pointer;">{{ person.name}}</h1>
+      <p>From: {{ person.country }}</p>
+      <p>Age: {{ person.dob | age }}</p>
+    </ion-item>
+
+    <ion-row>
+      <ion-col>
+        <span ion-button color="primary" clear small icon-start>
+            <ion-icon name='mail'></ion-icon>
+            {{ person.email }}
+          </span>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+  
+</ion-content>
